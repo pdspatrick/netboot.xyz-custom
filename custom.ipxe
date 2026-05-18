@@ -6,7 +6,7 @@
 :custom
 menu Activ@ Recovery
 item --gap This is the first sub menu
-item option_one ${space} LiveCD (Linux)
+item option_one ${space} LiveCD (Linux - broken)
 item option_two ${space} BootCD (WinPE)
 choose custom_choice || goto custom_exit
 echo ${cls}
@@ -14,12 +14,12 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-sanboot http://192.168.8.1/usb/isos/activeat_LiveCD.iso
-boot || goto custom_exit
+boot http://192.168.8.1/usb/isos/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_LiveCD.iso
+|| goto custom_exit
 
 :option_two
-sanboot http://192.168.8.1/usb/isos/activeat_BootCD.iso
-boot || goto custom_exit
+boot http://192.168.8.1/usb/isos/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_BootCD.iso iso
+|| goto custom_exit
 
 
 :custom_exit
