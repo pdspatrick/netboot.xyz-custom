@@ -14,13 +14,11 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-kernel http://192.168.8.1/usb/isos/memdisk raw iso
-initrd http://192.168.8.1/usb/isos/activeat_LiveCD.iso
+sanboot http://192.168.8.1/usb/isos/activeat_LiveCD.iso
 boot || goto custom_exit
 
 :option_two
-kernel http://192.168.8.1/usb/isos/memdisk raw iso
-initrd http://192.168.8.1/usb/isos/activeat_BootCD.iso
+sanboot http://192.168.8.1/usb/isos/activeat_BootCD.iso
 boot || goto custom_exit
 
 
