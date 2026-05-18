@@ -23,5 +23,4 @@ boot http://192.168.8.1/usb/utils/memdisk_uefi.elf http://192.168.8.1/usb/isos/a
 
 
 :custom_exit
-chain utils.ipxe
 exit
