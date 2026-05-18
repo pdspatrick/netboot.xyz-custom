@@ -14,11 +14,11 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-boot http://192.168.8.1/usb/isos/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_LiveCD.iso
+boot http://192.168.8.1/usb/utils/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_LiveCD.iso
 || goto custom_exit
 
 :option_two
-boot http://192.168.8.1/usb/isos/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_BootCD.iso iso
+boot http://192.168.8.1/usb/utils/memdisk_uefi.elf http://192.168.8.1/usb/isos/activeat_BootCD.iso iso
 || goto custom_exit
 
 
